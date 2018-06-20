@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[linux系统操作]]></title>
+    <url>%2F2018%2F05%2F26%2Flinux%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[此篇文章总结了一些linux系统上的基本指令和操作 基本指令1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768who - 当前用户名ps - process status 显示进程 -ef 显示所有进程全格式 ps -aux | grep nginx 查看nginx进程状态 kill -9/l 进程代码数字netstat -nap 查看网络占用进程adduser Ashley - 添加普通用户passwd Ashley - 设置密码userdel - 删除用户hostname - 显示和设置系统的主机名logout - 退出服务器reboot - 重启python --version - 查看当前版本查看帮助 man info --helppwd - print working directory 当前所在文件夹ls - list directory contents ls -l (long) ls -a (all) ls + 路径 - 路径下的所有目录 ls -la &gt; hello.txt - 递归出的目录全部放在hello.txt文件里mkdir - make directoryrmdir - remove directorytouch - 新建文件cd - change directory 打开文件夹 cd .. cd ../..cat - concatenate head/tail -num(显示行数) head -5 index.html less/more(一页一页的显示) cat index.html | lessrm - remove rm -r (recursive递归) rm -i (interactive) rm -f (force) rm -f *cp - copy cp -r source_dir dest_dir - 复制目录history !nummv - movewget + 链接 wget -O +文件名 +链接ctrl + c - 终止命令grep - 搜索指定内容 cat 文件名 | grep &apos;&lt;div .*&gt;&apos; grep &apos;&lt;div .*&gt;&apos; grep &apos;&lt;div .*&gt;&apos; .-R -n &amp; (R递归文件夹 n打印行号)top - cpu占用率jobs - 查看后台运行的程序 fg %1 bg %1wc - word count 行数和字数 wc -l +文件名 - 行数 wc -w +文件名 - 字数uniq - 相邻单词去重sort - 文件内容排序diff + 文件名 + 文件名 - 查找文件的不同file - 查看文件的类型cal - 当月日历echo - 回声 echo &apos;文字&apos; &gt; poem.txt (将文字写入poem文件) echo $((a + b)) echo $PATH (环境变量)HISTSIZE - 设置历史记录 连接SSH12345ssh Ashley@120.79.134.234 w - 查看连接的设备 wall - 给所有人发消息scp poem.txt Ashley@120.79.134.234:/home/hellokitty/ - 将poem文件安全拷贝到Ashley上sudo - super user do ###文件操作 123456789101112131415161718ln -l - link创建硬链接(相当于给文件做备份)ln -s - 创建软连接(相当于给文件建快捷方式) ln -s /usr/local/python3.6/bin/2to3 /usr/bin/2to3解压缩: gunzip + 文件名 xz -d + 文件名压缩: gzip + 文件名 xz -z -6 + 文件名解归档: tar -xvf + 文件名 xv - extract verbose抽取过程归档: tar -cvf all.tar *alias 创建别名 alias fuck=&apos;tar -cvf all.tar *&apos;unalias 反别名df - 磁盘的使用情况 ###文件权限 12345678所有者 同组用户 其他用户rw- r-- r--rwx r-x r-xread write executechmod - change mode 改变模式 chmod u+x + 文件名 chmod o+x,g+x +文件名 chmod 777 + 文件名 安装卸载12345678910111213141516171819202122yum intall gcc - yellowdog updater modified 包管理工具yum list installed | grep nginx 查看是否安装过nginxyum list nginx yum update nginx 更新文件rpm 红帽子的包管理工具 -i 安装 -e 移除 -vh 安装过程的信息 -qa | grep jdk 查询是否安装过jdk文件 rpm -qa | grep jdk | xargs rpm -e 移除jdk文件tar gz /tar - src - make &amp;&amp; make install - bin mysql 默认3306端口systemctl start firewalld stop firewalldsystemctl firewalld start - centos之前 statussystemctl enable mariadb 开机自启 disabled mariadb 禁用开机自启 vim指令1234567891011121314151617181920212223esc 5yy p - 复制粘贴5行esc u - undo撤销esc 5dd - 删除5行esc dw - 删一个单词esc d$ -删到行尾esc G - 去到最后一行esc 30G - 去到第30行esc gg - 去到第一行esc ctrl+fesc ctrl+besc ctrl+y - 向上翻页esc ctrl+e - 向下翻页esc $ - 去到行尾esc ^ - 去到行首:inoremap pymain if __name__ == &apos;__main__&apos; - 映射快捷键:syntax off - 关掉高量语法:set nu - 显示行数:set ts=4 - 设置制表键4个空格:wq/ZZ - 保存退出:q! - 强行退出vim .vimrc - 创建vim的配置文件!v - 将刚才以v开头的文件重新执行一遍]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>vim</tag>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F05%2F26%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick Start Create a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
